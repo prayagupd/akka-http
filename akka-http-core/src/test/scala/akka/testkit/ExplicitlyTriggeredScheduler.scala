@@ -49,6 +49,7 @@ class ExplicitlyTriggeredScheduler(config: Config, log: LoggingAdapter, tf: Thre
       .sortBy(_.time)
       .headOption match {
         case Some(task) ⇒
+          currentTime.set(task.time)
           task.runnable.run()
           scheduled.remove(task)
           task.interval.foreach(i ⇒ scheduled.put(task.copy(time = task.time + i.toMillis), ()))
