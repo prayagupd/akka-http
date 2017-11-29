@@ -23,3 +23,5 @@ addSbtPlugin("com.lightbend.akka" % "sbt-paradox-akka" % "0.4")
 addSbtPlugin("com.lightbend" % "sbt-whitesource" % "0.1.6")
 
 libraryDependencies += "org.kohsuke" % "github-api" % "1.68"
+
+libraryDependencies += "io.github.lukehutch" % "fast-classpath-scanner" % "2.9.3"
